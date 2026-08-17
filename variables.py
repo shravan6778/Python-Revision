@@ -30,3 +30,18 @@ print(f"x = {x}, type: {type(x)}")
 
 print(5 + "5") #Type error because python is strongly typed
 
+# Valid variable names
+_private   = "underscore start is fine"
+snake_case = "this is the Python convention, for variables and functions"   # preferred
+PascalCase = "For Classes"
+CONSTANT   = "ALL_CAPS for constants by convention"
+var2       = "letter first, then number is fine"
+
+#Assign the same value to multiple variables at once
+a = b = c = 100
+print(a, b, c)
+
+#Tuple unpacking — assign multiple variables in one line
+x, y, z = 100, 2.0, "Hello"
+print(x, y, z)
+

@@ -15,3 +15,18 @@ print(type(name))
 
 #memory address (identity) of a variable using id()
 print(id(age))
+
+'''
+Python is dynamically typed — the same variable can hold different types at different times. The type is tied to the value, not the variable name.
+'''
+x = 10
+print(f"x = {x}, type: {type(x)}")
+
+x = "Hello"
+print(f"x = {x}, type: {type(x)}")
+
+x = 3.14
+print(f"x = {x}, type: {type(x)}")
+
+print(5 + "5") #Type error because python is strongly typed
+

@@ -45,3 +45,19 @@ print(a, b, c)
 x, y, z = 100, 2.0, "Hello"
 print(x, y, z)
 
+#Swap two variables — Pythonic way (no temp variable needed!)
+first = 10
+second = 20
+first, second = second, first
+print(first, second)
+
+#Extended unpacking with * (star) — capture remaining values
+head, *tail = [1, 2, 3, 4, 5]
+print(head, tail)
+
+*body, last = [1, 2, 3, 4, 5]
+print(body, last)
+
+first, *middle, last = [1, 2, 3, 4, 5]
+print(first, middle, last)
+

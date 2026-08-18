@@ -100,3 +100,40 @@ print(x)              # Finds 'global'
 # local
 # enclosing
 # global
+
+#Object References & Mutability
+'''
+In Python, variables do not store values directly — they store references (pointers) to objects in memory.
+
+Immutable Objects (int, str, float, tuple, bool)
+
+When you "change" an immutable variable, Python creates a new object and points the variable to it. The original object is untouched.
+'''
+
+a = 10
+b = a             # b points to the SAME object as a
+
+print(f"a: {a}, b: {b}") # a: 10, b: 10
+print(id(a))
+print(id(b))
+print(f"Same object? {a is b}")    # True
+
+a = 20  # a now points to a NEW object (20); b still points to 10
+print(f"a: {a}, b: {b}")          # a: 20, b: 10
+print(f"Same object? {a is b}")    # False
+
+'''
+Mutable Objects (list, dict, set)
+
+When you assign one variable to another, both point to the same object. Modifying through one affects both.
+'''
+list_one = [1, 2, 3]
+list_two = list_one    # NOT a copy — both point to the SAME list in memory
+
+list_two.append(4)
+
+print(f"list_one: {list_one}")              # [1, 2, 3, 4] — also changed!
+print(f"list_two: {list_two}")              # [1, 2, 3, 4]
+print(f"Same object? {list_one is list_two}")   # True
+
+

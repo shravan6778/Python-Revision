@@ -61,3 +61,42 @@ print(body, last)
 first, *middle, last = [1, 2, 3, 4, 5]
 print(first, middle, last)
 
+#Variable Scope
+global_var = "I am global - accessible everywhere"
+
+def my_function():
+    local_var = "I am local - only inside this function"
+    print(global_var)
+    print(local_var)
+    
+my_function()
+print(global_var)
+print(local_var) #NameError - local_var does not exist
+
+#The LEGB Rule — Python's Scope Search Order
+'''
+L → Local       (inside the current function)
+E → Enclosing   (inside any outer/nested function)
+G → Global      (at the module/file level)
+B → Built-in    (Python's built-in names: print, len, range, type...)
+'''
+
+x = "global"          # Global scope
+
+def outer():
+    x = "enclosing"   # Enclosing scope
+
+    def inner():
+        x = "local"   # Local scope
+        print(x)      # Finds 'local' first — stops here
+
+    inner()
+    print(x)          # Finds 'enclosing'
+
+outer()
+print(x)              # Finds 'global'
+
+# Output:
+# local
+# enclosing
+# global

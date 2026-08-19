@@ -10,3 +10,39 @@ print(type((1,2)))
 print(type({1,2}))
 print(type({"a":1}))
 print(type(None))
+
+#Numeric Types — int, float, complex
+#int — Integer (Whole Numbers)
+x = 100
+y = -100
+big = 999_999_999
+print(type(big))
+
+#Number bases
+binary = 0b1010
+octal = 0o12
+hexa_dec = 0xA
+
+print(binary, octal, hexa_dec)
+
+#float — Floating Point (Decimal Numbers)
+
+pi = 3.14
+sci = 1.5e10    # Scientific notation: 1.5 × 10^10
+print(type(pi))   
+print(sci)        # 15000000000.0
+
+# Float precision issue — important to know!
+print(0.1 + 0.2)
+print(round(0.1 + 0.2, 2))
+
+# complex — Complex Numbers
+c = 2 + 3j
+print(type(c))
+print(c.real)
+print(c.imag)
+print(abs(c))
+
+#intresting floor division
+print(7 // 2)   # 3
+print(-7 // 2)  # -4 because floor division rounds toward negative infinity, not toward zero.

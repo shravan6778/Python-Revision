@@ -53,3 +53,9 @@ s2 = "Double quotes"
 s3 = """Triple quotes
 span multiple
 lines."""
+
+#Boolean Type — bool
+is_active = True
+is_logged = False
+
+print(type(is_active))    # <class 'bool'>

@@ -69,3 +69,19 @@ r1 = range(5)
 r2 = range(1, 6)       
 r3 = range(0, 10, 2)   
 r4 = range(10, 0, -1)  
+
+#Set Type — set
+my_set = {1, 2, 3, 3, 3, 2}   # Duplicates automatically removed
+print(my_set) 
+
+#Mapping Type — dict
+student = {
+    "name":     "Shravan",
+    "age":      21,
+    "grade":    "A",
+    "subjects": ["Math", "Python", "DSA"]   # Value can be a list
+}
+
+#NoneType — None
+result = None
+print(result) 

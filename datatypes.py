@@ -59,3 +59,13 @@ is_active = True
 is_logged = False
 
 print(type(is_active))    # <class 'bool'>
+
+#Sequence Types — list, tuple, range
+fruits = ["apple", "banana", "apple", "cherry"]
+
+coordinates = (10, 20, 30)
+
+r1 = range(5)          
+r2 = range(1, 6)       
+r3 = range(0, 10, 2)   
+r4 = range(10, 0, -1)  

@@ -46,3 +46,10 @@ print(abs(c))
 #intresting floor division
 print(7 // 2)   # 3
 print(-7 // 2)  # -4 because floor division rounds toward negative infinity, not toward zero.
+
+#Text Type — str
+s1 = 'Single quotes'
+s2 = "Double quotes"
+s3 = """Triple quotes
+span multiple
+lines."""

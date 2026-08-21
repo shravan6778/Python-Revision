@@ -85,3 +85,44 @@ student = {
 #NoneType — None
 result = None
 print(result) 
+
+#Type Conversion (Typecasting)
+#Implicit Conversion — Python Does It Automatically
+
+num_int = 10
+num_float = 5.5
+result = num_int + num_float
+print(result)
+print(type(result))
+
+#Explicit Conversion — Doing It Manually
+# str → int / float
+age_str   = "25"
+price_str = "19.99"
+
+age_int     = int(age_str)       
+price_float = float(price_str)   
+
+print(age_int + 1)        
+print(price_float * 2)    
+
+# int/float → str
+score   = 98
+print("Score: " + str(score))          
+print(f"Score: {score}") 
+
+# bool conversions 
+print(bool(0))      
+print(bool(42)) 
+print(bool("")) 
+print(bool("hi"))
+print(bool(None)) 
+print(bool([]))   
+print(bool([0]))   
+
+
+# Collection conversions
+original = [1, 2, 2, 3, 4, 4]
+as_set   = set(original)     
+as_tuple = tuple(as_set)     
+as_list  = list(as_tuple)    

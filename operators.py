@@ -49,3 +49,13 @@ def risky():
 print(False and risky()) # False — risky() never called
 print(True or risky()) # True  — risky() never called
 
+
+# Bitwise Operators
+p, q = 5, 3
+
+print(p & q)
+print(p | q)
+print(p ^ q)
+print(~p)
+print(10 << 2)
+print(20 >> 2)

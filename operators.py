@@ -69,3 +69,25 @@ x *= 2
 x /= 2
 x //= 2
 x **= 2
+
+#Identity Operators
+a = 10
+b = a
+c = 20
+print(a is b)
+print(a is not c)
+
+#Membership Operators
+l = [1, 2, 3, 4]
+print(2 in l)
+print(10 not in l)
+
+# Works on strings (substring check)
+email = "sandy@gmail.com"
+print("@" in email)
+print("gmail" in email)
+
+# Dictionary: checks KEYS
+info = {"name": "Sandy", "city": "Hyderabad"}
+print("name" in info)   # True
+print("Sandy" in info)  # False — "Sandy" is a value, not a key

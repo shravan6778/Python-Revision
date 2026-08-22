@@ -27,3 +27,25 @@ print(m <= n)
 age = 22
 print(18 <= age < 30)
 
+#Logical Operators
+#Precedence among logical operators: not > and > or
+
+high_income = True
+good_credit = False
+
+print(high_income and good_credit)
+
+print(high_income or good_credit)
+
+print(not good_credit)
+
+# Precedence demo
+result = True or False and False
+print(result) # True
+
+# Short-circuit demo
+def risky():
+    raise ValueError("This should not run!")
+print(False and risky()) # False — risky() never called
+print(True or risky()) # True  — risky() never called
+

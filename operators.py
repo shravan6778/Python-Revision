@@ -59,3 +59,13 @@ print(p ^ q)
 print(~p)
 print(10 << 2)
 print(20 >> 2)
+
+#Assignment & Augmented Operators
+
+x = 10
+x += 5
+x -= 5
+x *= 2
+x /= 2
+x //= 2
+x **= 2

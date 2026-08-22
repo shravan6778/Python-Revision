@@ -52,3 +52,42 @@ In Python, variables do not store values directly; they store references (pointe
   When you "change" an immutable variable, Python creates a completely new object in memory and updates the reference. If `b = a`, and `a` is reassigned, `b` remains completely unaffected.
 - **Mutable Objects** (`list`, `dict`, `set`):
   When you assign one variable to another (e.g., `list_two = list_one`), both variables point to the exact **same object** in memory. Modifying the object through one variable (like `list_two.append(4)`) will reflect in all variables pointing to that object.
+
+---
+
+### 7. Built-in Data Types
+
+Python has a rich set of built-in data types to represent different kinds of data.
+
+- **Numeric Types (`int`, `float`, `complex`)**:
+- **`int` (Integers)**: Whole numbers. Supports visual separators (`999_999_999`) and different number bases: Binary (`0b1010`), Octal (`0o12`), and Hexadecimal (`0xA`).
+- **`float` (Floating Point)**: Decimal numbers. Supports scientific notation (e.g., `1.5e10`). Note: Floats have inherent precision limits (e.g., `0.1 + 0.2` results in `0.30000000000000004`), so use `round()` when necessary.
+- **`complex` (Complex Numbers)**: Written with a `j` suffix (e.g., `2 + 3j`). You can access parts using `.real` and `.imag`.
+- _Mathematical Quirk_: Floor division (`//`) rounds toward _negative infinity_. `7 // 2` is `3`, but `-7 // 2` is `-4`.
+
+- **Text Type (`str`)**: Strings can be defined using single quotes, double quotes, or triple quotes (for multi-line strings).
+- **Boolean Type (`bool`)**: Represents truth values, strictly `True` or `False`.
+- **Sequence Types (`list`, `tuple`, `range`)**:
+- **`list`**: Mutable sequences (e.g., `["apple", "banana"]`).
+- **`tuple`**: Immutable sequences (e.g., `(10, 20)`).
+- **`range`**: Generates a sequence of numbers. Supports start, stop, and step arguments (e.g., `range(10, 0, -1)` counts backwards).
+
+- **Set Type (`set`)**: Unordered collections of unique elements (e.g., `{1, 2, 3}`). Duplicates are removed automatically upon creation.
+- **Mapping Type (`dict`)**: Key-value pairs (e.g., `{"name": "Shravan", "age": 21}`). Values can be of any data type, including lists or other dictionaries.
+- **NoneType (`None`)**: A special type representing the absence of a value.
+
+---
+
+### 8. Type Conversion (Typecasting)
+
+Python allows you to convert values from one data type to another, either automatically or manually.
+
+- **Implicit Conversion**: Python does this automatically to prevent data loss. For example, adding an `int` and a `float` results in a `float` (`10 + 5.5 = 15.5`).
+- **Explicit Conversion**: Doing it manually using built-in functions.
+- String to Number: `int("25")` or `float("19.99")`
+- Number to String: `str(98)` (or use f-strings: `f"Score: {score}"`)
+- Collection Conversions: You can easily cast between collections. `set([1, 2, 2])` becomes `{1, 2}`, which can then be cast to a tuple via `tuple(my_set)`.
+
+- **Boolean Conversions (Truthy & Falsy)**: When casting to `bool()`, Python evaluates values based on their content:
+- **Falsy (Evaluates to False)**: `0`, `""` (empty string), `None`, `[]` (empty list/collections).
+- **Truthy (Evaluates to True)**: Any non-zero number (e.g., `42`), non-empty strings (`"hi"`), and populated collections (`[0]`).
